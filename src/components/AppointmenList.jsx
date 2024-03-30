@@ -1,19 +1,29 @@
-import { appointmentData } from "../helpers/Data"
-import { doctorData } from "../helpers/Data"
-import { useState } from "react"
-import AddModal from "./AddModal"
-console.log(appointmentData)
+import { appointmentData } from "../helpers/Data";
+import { useState } from "react";
+import CloseButton from 'react-bootstrap/CloseButton';
 
-const AppointmenList = ({appointmentData}) => {
-    const [] = useState('')
+console.log(appointmentData);
+
+function AppointmenList() {
+  const [show, setShow] = useState(true);
+
   return (
-    <div>
-        <h1>AppointmenList</h1>
-    
-        
-     
-    </div>
-  )
+    <>
+      <div>
+        <h2>Appointments</h2>
+        <ul className="appointments"> 
+          {appointmentData.map((appointment) => (
+            <li key={appointment.id}>
+              <p>Patient: {appointment.patient}</p>    
+             <p>Doctor: {appointment.doctor}</p>
+             <p>Date: {new Date(appointment.day).toDateString()}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <CloseButton aria-label="Hide" />
+    </>
+  );
 }
 
-export default AppointmenList
+export default AppointmenList;
