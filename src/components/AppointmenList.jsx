@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from "react";
+// import React, { useState, useEffect } from "react";
 
-import CloseButton from "react-bootstrap/CloseButton";
+// import CloseButton from "react-bootstrap/CloseButton";
 
-const AppointmentList = ({HandleSubmit}) => {
+// const AppointmentList = ({HandleSubmit}) => {
  
 
-  return (
-    <>
+//   return (
+//     <>
      
-    </>
-  );
-}
+//     </>
+//   );
+// }
 
-export default AppointmentList;
+// export default AppointmentList;
 
 
 
