@@ -116,7 +116,7 @@ const Home = () => {
   }
 
   const handleSubmit = () => {
-    const newAppointment = {doctor: selectedDoctor, patient: patientName, day: date };
+    const newAppointment = {doctor: selectedDoctor, patient: patientName, day: date, consulted: false, id: Date.now()};
     setAppointments([...appointments, newAppointment]);
     setPatientName(""); // Clear patientName instead of patient
     setDate(""); // Clear date instead of day
