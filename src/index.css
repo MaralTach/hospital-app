@@ -65,6 +65,7 @@
 
 .home-container {
   padding-top: 120px;
+  
 }
 .home-image {
   display: flex;
@@ -111,6 +112,7 @@ h3 {
 
 .doctors{
    padding-top: 120px;
+   text-align: center;
 }
 
 .doctor-title{

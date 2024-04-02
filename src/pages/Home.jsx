@@ -113,7 +113,7 @@ const Home = () => {
   }
 
   const handleSubmit = () => {
-    const newAppointment = {doctor: selectedDoctor, patient: patientName, day: date, consulted: false, id: Date.now()};
+    const newAppointment = {doctor: selectedDoctor, patient: patientName, day: date, consulted: false, id: Date.now(), time: getCurrentDateTime() };
     setAppointments([...appointments, newAppointment]);
     setPatientName(""); // Clear patientName instead of patient
     setDate(""); // Clear date instead of day
@@ -226,6 +226,7 @@ const Home = () => {
                 <p>Patient: {appointment.patient}</p>
                 <p>Doctor: {appointment.doctor}</p>
                 <p>Date: {new Date(appointment.day).toDateString()}</p>
+                
                 <CloseButton
                   onClick={() => removeAppointment(appointment.id)}
                 />
