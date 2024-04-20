@@ -8,10 +8,6 @@ Project Description: (A paragraph explaining the purpose of the project, its use
 - React Bootstrap
 - Other libraries used...
 
-## Installation
-
-1. Clone the repository: `https://github.com/MaralTach/hospital-app`
-2. Navigate to the project directory: `https://hospital-app-topaz.vercel.app/`
 
 ## Usage
 
