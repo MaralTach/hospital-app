@@ -10,9 +10,8 @@ Project Description: (A paragraph explaining the purpose of the project, its use
 
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/user/name.git`
+1. Clone the repository: `https://github.com/MaralTach/hospital-app`
 2. Navigate to the project directory: `cd project_name`
-
 
 ## Usage
 
@@ -27,7 +26,7 @@ Some functional features have been added to this project using React hooks:
 The useState hook is used to manage state within the component. For example:
 
 ```jsx
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const ExampleComponent = () => {
   const [count, setCount] = useState(0);
@@ -35,9 +34,8 @@ const ExampleComponent = () => {
   return (
     <div>
       <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
-        Click me
-      </button>
+      <button onClick={() => setCount(count + 1)}>Click me</button>
     </div>
   );
 };
+```
