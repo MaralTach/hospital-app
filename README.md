@@ -34,4 +34,31 @@ const ExampleComponent = () => {
     </div>
   );
 };
+
+import React, { useEffect, useState } from 'react';
+
+const ExampleComponent = () => {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    const response = await fetch('https://api.example.com/data');
+    const jsonData = await response.json();
+    setData(jsonData);
+  };
+
+  return (
+    <div>
+      {data ? (
+        <p>Data: {data}</p>
+      ) : (
+        <p>Loading...</p>
+      )}
+    </div>
+  );
+};
+
 ```
