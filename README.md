@@ -1,6 +1,7 @@
-# Project Name
+# Appointment 
 
-Project Description: (A paragraph explaining the purpose of the project, its use cases, and the value it provides)
+Project Description: (Medical Care is a modern web application designed to simplify the appointment booking process in healthcare facilities. Built using React, it offers a seamless user experience for patients to search for doctors, schedule appointments, and manage their bookings. The application also includes features for doctors to view their appointment schedules and mark appointments as consulted.
+)
 
 ## Tools and Technologies Used
 
