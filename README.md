@@ -76,9 +76,6 @@ const ExampleComponent = () => {
 
 
 
-Certainly! Here's the updated README with the GIF added:
-
-```markdown
 # Doctor Appointment Booking Application
 
 This project is a simple doctor appointment booking application built with React. It allows users to search for doctors, view details, and book appointments. The application uses React Bootstrap for styling and local storage to save the state of appointments.
@@ -185,6 +182,4 @@ This project is licensed under the MIT License.
 ## Contact
 
 If you have any questions, feel free to contact me at [your-email@example.com].
-```
 
-Make sure to replace `yourusername` with your GitHub username and `your-email@example.com` with your contact email address. This code block can be copied directly into a `README.md` file for your GitHub project.
