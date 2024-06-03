@@ -4,8 +4,9 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import Modal from 'react-bootstrap/Modal';
-import CloseButton from "react-bootstrap/esm/CloseButton";
 import { appointmentData } from "../helpers/Data";
+import {TiTick ,TiDelete} from 'react-icons/ti'
+import { addLocal } from "../helpers/utils";
 
 
 
@@ -58,6 +59,7 @@ const Home = () => {
   const removeAppointment = (id) => {
     setAppointments(prevAppointments =>
       prevAppointments.filter((appointment) => appointment.id !== id)
+
     );
   };
 
@@ -76,14 +78,11 @@ const Home = () => {
     ]);
   };
 
-  const toggleConsulted = (index) => {
-    setAppointments((appointments) =>
-      appointments.map((appointment, i) =>
-        i === index
-          ? { ...appointment, consulted: !appointment.consulted }
-          : appointment
-      )
-    );
+  const handleToggle= (index) => {
+    const newAppo = appoinments?.map(appo => appo.id === appoinments.id ? {...appo,consulted: !appo.consulted} : appo );
+    setAppoinments(newAppo)
+    // localStorage.setItem("appointments",JSON.stringify(newAppo))
+    addLocal("appointments",newAppo)
   };
 
   const handleChange = (event) => {
@@ -95,13 +94,6 @@ const Home = () => {
     setShow(true);
   };
 
-  // const handleDate = (event) => {
-  //   if (event.target.id === "patient") {
-  //     setPatient(event.target.value);
-  //   } else if (event.target.id === "day") {
-  //     setDay(event.target.value);
-  //   }
-  // };
   function getCurrentDateTime() {
     const now = new Date();
     const year = now.getFullYear();
@@ -215,7 +207,7 @@ const Home = () => {
 
 
 
-        <div id="appointmentss" className="appointments-container mt-5">
+        <div key={appoinments.id} id="appointmentss" className={"appointments-container mt-5" + (doctorData.consulted ? " consulted" : "")}>
         <h2>Appointments</h2>
         <div className="appointments">
        
@@ -227,9 +219,9 @@ const Home = () => {
                 <p>Doctor: {appointment.doctor}</p>
                 <p>Date: {new Date(appointment.day).toDateString()}</p>
                 
-                <CloseButton
-                  onClick={() => removeAppointment(appointment.id)}
-                />
+                <TiDelete type="button" className="text-danger display-2"
+                  onClick={() => removeAppointment(appointment.id)}/>
+                 <TiTick type="button" className="text-success display-2" onClick={()=> handleToggle(appointment.id)}/>
               </li>
             </ul>
           ))}
